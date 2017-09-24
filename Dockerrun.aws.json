@@ -3,7 +3,15 @@
   "volumes": [],
   "containerDefinitions": [
     {
-      "name": "nginx-test",
+      "name": "cyngn",
+      "image": "421457959010.dkr.ecr.us-east-1.amazonaws.com/circleci-test-docker-image:latest",
+      "environment": [],
+      "essential": true,
+      "memory": 128,
+      "mountPoints": []
+    },
+    {
+      "name": "nginx",
       "image": "421457959010.dkr.ecr.us-east-1.amazonaws.com/nginx-test:latest",
       "essential": true,
       "memory": 128,
@@ -13,7 +21,9 @@
           "containerPort": 80
         }
       ],
-      "links": [],
+      "links": [
+        "cyngn"
+      ],
       "mountPoints": []
     }
   ]
