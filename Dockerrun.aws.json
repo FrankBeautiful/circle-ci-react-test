@@ -1,13 +1,20 @@
 {
-  "AWSEBDockerrunVersion": "1",
-  "Image": {
-    "Name": "421457959010.dkr.ecr.us-east-1.amazonaws.com/circleci-test-docker-image:latest",
-    "Update": "true"
-  },
-  "Ports": [
+  "AWSEBDockerrunVersion": 2,
+  "volumes": [],
+  "containerDefinitions": [
     {
-      "ContainerPort": "3000"
+      "name": "circleci-test-docker-image",
+      "image": "421457959010.dkr.ecr.us-east-1.amazonaws.com/circleci-test-docker-image:latest",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 3000
+        }
+      ],
+      "links": [],
+      "mountPoints": []
     }
-  ],
-  "Volumes": []
+  ]
 }
