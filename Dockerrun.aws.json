@@ -3,14 +3,14 @@
   "volumes": [],
   "containerDefinitions": [
     {
-      "name": "circleci-test-docker-image",
-      "image": "421457959010.dkr.ecr.us-east-1.amazonaws.com/circleci-test-docker-image:latest",
+      "name": "nginx-test",
+      "image": "421457959010.dkr.ecr.us-east-1.amazonaws.com/nginx-test:latest",
       "essential": true,
       "memory": 128,
       "portMappings": [
         {
           "hostPort": 80,
-          "containerPort": 3000
+          "containerPort": 80
         }
       ],
       "links": [],
