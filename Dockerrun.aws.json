@@ -7,22 +7,12 @@
       "image": "421457959010.dkr.ecr.us-east-1.amazonaws.com/circleci-test-docker-image:latest",
       "environment": [],
       "essential": true,
-      "memory": 128,
-      "mountPoints": []
-    },
-    {
-      "name": "nginx",
-      "image": "421457959010.dkr.ecr.us-east-1.amazonaws.com/nginx-test:latest",
-      "essential": true,
-      "memory": 128,
+      "memory": 256,
       "portMappings": [
         {
           "hostPort": 80,
-          "containerPort": 80
+          "containerPort": 3000
         }
-      ],
-      "links": [
-        "cyngn"
       ],
       "mountPoints": []
     }
